@@ -1,0 +1,4 @@
+card1 = [3]
+card2 = [6]
+hand = []
+my_hand = hand.push("card1", "card2")
