@@ -1,4 +1,5 @@
 class Card
+  attr_accessor :crank, :rank
   def initialize
     @rank = [2, 3, 4, 5, 6, 7, 8, 9, 10, :Jack, :Queen, :King, :Ace].sample
   end
