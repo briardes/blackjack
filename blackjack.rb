@@ -1,14 +1,14 @@
 require './card'
 require 'pry'
 class Hand
-  attr_accessor :my_hand
+  attr_accessor :hand
   def initialize
-    @my_hand = [Card.new.crank, Card.new.crank]
+    @hand = [Card.new.crank, Card.new.crank]
   end
 
   def value
     total = 0  # total is an integer
-    @my_hand.each do | x | # totes is an array
+    @hand.each do | x | # totes is an array
       total = x + total # we want to increment the integer
     end
     total # and return the integer1
@@ -40,15 +40,15 @@ class Game
 
   def hit
     if ask == true
-      @my_hand.push(Card.new.crank)
+      @my_hand.hand.push(Card.new.crank)
     end
   end
 
   def new_hand
     @my_hand.clear
     @dealer_hand.clear
-    2.times { @my_hand.push(Card.new.crank) }
-    2.times { @dealer_hand.push(Card.new.crank) }
+    2.times { @my_hand.hand.push(Card.new.crank) }
+    2.times { @dealer_hand.hand.push(Card.new.crank) }
   end
 
   def stack
